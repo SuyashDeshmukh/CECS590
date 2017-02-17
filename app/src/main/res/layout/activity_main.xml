@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@android:color/white"
+    tools:context="edu.csulb.android.cecs590.MainActivity">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/tacopronto"
+        android:id="@+id/image"
+        android:background="@android:color/white"
+        />
+
+    <TextView
+        android:text="@string/Size"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/Size"
+
+        android:background="@drawable/shape"
+        />
+
+    <TextView
+        android:text="@string/Tortilla"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Size"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="80dp"
+        android:id="@+id/Tortilla"
+
+        android:background="@drawable/shape"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Size"
+        android:layout_alignStart="@+id/Size"
+        android:layout_marginTop="10dp"
+        android:id="@+id/SizeGroup">
+
+    <RadioButton
+        android:text="Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Size"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/Large" />
+
+    <RadioButton
+        android:text="Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Large"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/Medium"
+        android:checked="true"
+        />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TortillaGroup"
+        android:layout_below="@id/Tortilla"
+        android:layout_marginTop="10dp"
+        android:layout_alignStart="@+id/Tortilla"
+        >
+
+        <RadioButton
+            android:text="Corn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Tortilla"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/Corn" />
+
+        <RadioButton
+            android:text="Flour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Corn"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/Flour"
+            android:checked="true"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:text="Fillings"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TortillaGroup"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/Fillings"
+        android:background="@drawable/shape"
+        />
+    <CheckBox
+        android:id="@+id/Beef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Fillings"
+        android:layout_alignStart="@id/SizeGroup"
+        android:layout_marginStart="20dp"
+        android:text="Beef"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Beef"
+        android:layout_alignStart="@id/SizeGroup"
+        android:layout_marginStart="20dp"
+        android:id="@+id/Chicken"
+        android:text="Chicken"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Chicken"
+        android:layout_alignStart="@id/SizeGroup"
+        android:layout_marginStart="20dp"
+        android:id="@+id/WhiteFish"
+        android:text="White Fish"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/WhiteFish"
+        android:layout_alignStart="@id/SizeGroup"
+        android:layout_marginStart="20dp"
+        android:id="@+id/Cheese"
+        android:text="Cheese"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Cheese"
+        android:layout_alignStart="@id/SizeGroup"
+        android:id="@+id/SeaFood"
+        android:layout_marginStart="20dp"
+        android:text="Sea Food"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Fillings"
+        android:layout_alignLeft="@id/Beef"
+        android:layout_alignStart="@+id/TortillaGroup"
+        android:layout_marginStart="30dp"
+        android:id="@+id/Rice"
+        android:text="Rice"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Rice"
+        android:layout_alignLeft="@id/Chicken"
+        android:layout_alignStart="@+id/TortillaGroup"
+        android:layout_marginStart="30dp"
+        android:id="@+id/Beans"
+        android:text="Beans"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Beans"
+        android:layout_alignLeft="@id/WhiteFish"
+        android:layout_alignStart="@+id/TortillaGroup"
+        android:layout_marginStart="30dp"
+        android:id="@+id/PicodeGallo"
+        android:text="Pico de Gallo"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/PicodeGallo"
+        android:layout_alignLeft="@id/Cheese"
+        android:layout_alignStart="@+id/TortillaGroup"
+        android:layout_marginStart="30dp"
+        android:id="@+id/Guacamole"
+        android:text="Guacamole"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Guacamole"
+        android:layout_alignLeft="@id/SeaFood"
+        android:layout_alignStart="@+id/TortillaGroup"
+        android:layout_marginStart="30dp"
+        android:id="@+id/LBT"
+        android:text="LBT"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/LBT"
+        android:id="@+id/Beverages"
+        android:text="Beverages"
+        android:gravity="center"
+        android:background="@drawable/shape"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Beverages"
+        android:layout_alignStart="@id/SeaFood"
+        android:id="@+id/Soda"
+        android:text="Soda"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Soda"
+        android:layout_alignStart="@id/Soda"
+        android:id="@+id/Cerveza"
+        android:text="Cerveza"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Beverages"
+        android:layout_alignLeft="@id/Soda"
+        android:layout_alignStart="@id/LBT"
+        android:id="@+id/Margarita"
+        android:text="Margarita"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Margarita"
+        android:layout_alignLeft="@id/Cerveza"
+        android:layout_alignStart="@id/Margarita"
+        android:id="@+id/Tequila"
+        android:text="Tequla"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Tequila"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/Placeorder"
+        android:text="Place Your Order"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:gravity="left"
+        android:paddingRight="2dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignRight="@+id/image"
+       android:background="@android:color/white"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Taco Pronto"
+            android:textSize="20sp"
+            android:id="@+id/TacoPronto"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/PicodeGallo" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Address"
+            android:layout_below="@+id/TacoPronto"
+
+            android:layout_alignStart="@+id/TacoPronto"
+            android:layout_marginLeft="8dp"
+            android:text="123 Euclid Ave"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Phone"
+
+            android:layout_below="@+id/Address"
+            android:layout_alignStart="@+id/TacoPronto"
+            android:layout_marginLeft="8dp"
+            android:text="Phone: 562-850-7043"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+</ScrollView>
