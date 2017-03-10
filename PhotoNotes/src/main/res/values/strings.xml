@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PhotoNotes</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_uninstall">Uninstall</string>
+    <string name="takephoto">Take Photo</string>
+    <string name="captionhint">Enter Caption</string>
+    <string name="save">Save</string>
+    <string name="transition">transit</string>
+</resources>
