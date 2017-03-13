@@ -23,13 +23,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".AddPhotoActivity" >
+        <activity android:name=".AddPhotoActivity"  android:configChanges="orientation|screenSize">
 
 
 
         </activity>
 
-        <activity android:name=".ViewPhotoActivity"></activity>
+        <activity android:name=".ViewPhotoActivity" android:configChanges="orientation|screenSize"></activity>
 
         <provider
             android:name="android.support.v4.content.FileProvider"

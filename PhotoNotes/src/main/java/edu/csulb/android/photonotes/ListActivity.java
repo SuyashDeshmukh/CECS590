@@ -110,7 +110,7 @@ public class ListActivity extends AppCompatActivity {
             intent.setData(Uri.parse("package:edu.csulb.android.photonotes"));
             startActivity(intent);
 
-            return true;
+            //return true;
         }
 
         return super.onOptionsItemSelected(item);

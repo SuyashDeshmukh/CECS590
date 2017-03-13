@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;
@@ -42,10 +43,15 @@ public class AddPhotoActivity extends Activity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                captiontxt= caption.getText().toString();
-                saveFileAndCaption();
-                finish();
+                if(caption.getText().toString().equals(""))
+                {
+                    Toast.makeText(AddPhotoActivity.this, "Please Enter a Caption!", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    captiontxt = caption.getText().toString();
+                    saveFileAndCaption();
+                    finish();
+                }
             }
         });
 
